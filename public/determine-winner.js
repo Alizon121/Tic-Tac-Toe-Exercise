@@ -1,16 +1,21 @@
 // Create a 2D array to represent the board
-const board = []
 
 export const boardHandler = (tr) => {
+    const board = []
     for (let i =0; i < tr.length; i++) {
         const row = tr[i] // is the cells in one row or column?
         const rowData = []
-        for (let j = 0; j < row.cells.length; j++) {
-            const cell = row[j]
-            rowData.push(cell.textContent)
+        for (let j = 0; j < row.children.length; j++) {
+            const cell = row.children[j]
+            if (cell.dataset.player) {
+                rowData.push(cell.dataset.player)
+            } else {
+                rowData.push(" ")
+            }
         }
         board.push(rowData)
     }
+
     return board
 }
     
