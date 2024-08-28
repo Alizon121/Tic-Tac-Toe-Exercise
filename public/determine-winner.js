@@ -5,7 +5,6 @@ export const boardHandler = (tr) => {
     for (let i =0; i < tr.length; i++) {
         const row = tr[i] // is the cells in one row or column?
         const rowData = []
-        console.log(row.cells.length)
         for (let j = 0; j < row.cells.length; j++) {
             const cell = row[j]
             rowData.push(cell.textContent)
