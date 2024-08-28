@@ -1,24 +1,19 @@
 // Create a 2D array to represent the board
-export const table = document.getElementsByTagName("table")
-export const board = []
+const board = []
 
-export const boardHandler = table => {
-    for (let i =0; i < table.length; i++) {
-        const row = table[i]
+export const boardHandler = (tr) => {
+    for (let i =0; i < tr.length; i++) {
+        const row = tr[i] // is the cells in one row or column?
         const rowData = []
-        
-        for (let j = 0; j < row.length; j++) {
+        console.log(row.cells.length)
+        for (let j = 0; j < row.cells.length; j++) {
             const cell = row[j]
             rowData.push(cell.textContent)
         }
         board.push(rowData)
     }
-    
+    return board
 }
-
-    
-    
-    
     
     // There are many possiblities for winning in tic tac toe.
     // How do we represent them all? -> iterate over all squares every time and see if there are three in a row?

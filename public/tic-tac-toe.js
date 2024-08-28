@@ -1,5 +1,5 @@
 // // Your code here 
-import { winnerHandler, tieHandler, table, board, boardHandler } from "./determine-winner.js"
+import { winnerHandler, tieHandler, boardHandler } from "./determine-winner.js"
 
 
 window.onload = () =>{
@@ -49,17 +49,18 @@ window.onload = () =>{
     const spanTie = document.createElement("span")
     spanTie.innerText = "Winner: Tie"
 
-    board
-    boardHandler(table)
+
+ const currentTable = document.getElementsByTagName("tr")
+ const currentBoard = boardHandler(currentTable)
 
     // identify winner/tie
-    if (winnerHandler(board)) {
+    if (winnerHandler(currentBoard)) {
         // if winner is X
-        if (board[i][j] === img && img.src === "./images/X_image.png") {
+        if (currentBoard[i][j] === img && img.src === "./images/X_image.png") {
             h1.appendChild(spanWinnerX)
         }
         // if winner is O
-        if (board[i][j] === img && img.src === "./images/O_image.png") {
+        if (currentBoard[i][j] === img && img.src === "./images/O_image.png") {
             h1.appendChild(spanWinnerO)
         }
     }
