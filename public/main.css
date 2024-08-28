@@ -1,0 +1,61 @@
+/* Your code here */
+h1 {
+    text-align: center;
+}
+table {
+    display: flex;
+    justify-content: center;
+}
+
+td {
+height: 40px;
+width:40px;
+/* border-top: 2px solid black; */
+}
+
+#square-0 {
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#square-1{
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#square-2 {
+    border-bottom: 2px solid black
+}
+
+#square-3 {
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#square-4 {
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#square-5 {
+    border-bottom: 2px solid black;
+}
+
+#square-6 {
+    border-right: 2px solid black;
+}
+
+#square-7 {
+    border-right: 2px solid black;
+}
+img {
+    height: 30px;
+    width: 30px
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+
+}
